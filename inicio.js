@@ -1,4 +1,4 @@
-let lista = document.getElementById("listado");
+let lista = document.getElementById("productos");
 
 fetch("./productos.json")
 .then((response) => response.json ())
@@ -7,7 +7,7 @@ fetch("./productos.json")
         const li = document.createElement("li");
         li.innerHTML = `
         <h2>ID: ${item.id}</h2>
-        <img src= "img/${item.imagen}"/>
+        <img src= "${item.imagen}"/>
         <p>nombre: ${item.nombre}</p>
         <b>precio: ${item.precio}</b>
         `

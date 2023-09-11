@@ -1,5 +1,5 @@
 
-import { productosDisponibles } from "./main.js"
+
 
 JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem("carrito", JSON.stringify([]))
 
@@ -26,7 +26,7 @@ btnCarrito.addEventListener("click", () => {
 })
 
 // funcion comprar productos parametros para buscar el producto por id crear id producto y export para mandar al inciio porque hay estan los productos
-export const comprarProducto = (idProducto) => {
+    const comprarProducto = (idProducto) => {
 
     const producto = productosDisponibles.find((producto) => producto.id === idProducto)
 
