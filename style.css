@@ -29,22 +29,6 @@ body{
 }
 
 
-.card-p{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-}
-.card{
-    margin: 25px;
-    align-items: center;
-    text-align: center;
-    
-}
-
-
 
 footer div{
     width: 100%;

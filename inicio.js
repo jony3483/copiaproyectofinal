@@ -1,8 +1,8 @@
 let lista = document.getElementById("productos");
 
-document.addEventListener("DOMContentLoaded", () => {
-    generarCardsProductos(productosDisponibles)
-})
+//document.addEventListener("DOMContentLoaded", () => {
+//    generarCardsProductos(productosDisponibles)
+//})
 
 fetch("./productos.json")
 .then((response) => response.json ())
@@ -14,11 +14,11 @@ fetch("./productos.json")
         <img src= "${item.imagen}"/>
         <p>nombre: ${item.nombre}</p>
         <b>precio: ${item.precio}</b>
-        <button id="comprar${id}" class="btn btn-primary">añadir al carrito</button>
-        `
-        listado.appendchild(li)
+        <button id="comprar${item.id}" class="btn btn-primary">añadir al carrito</button>
+        `;
+        lista.appendChild(li);
 
-        const btnComprar = document.getElementById(`comprar${id}`)
+            const btnComprar = document.getElementById(`comprar${item.id}`);
             btnComprar.addEventListener("click", () => {
                //alert de libreira
                 Swal.fire({
@@ -29,9 +29,5 @@ fetch("./productos.json")
                 })
                 comprarProducto(id)
             });
-
-
-
-
     });
 })
