@@ -1,6 +1,4 @@
 
-
-
 JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem("carrito", JSON.stringify([]))
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,6 +80,7 @@ const dibujarCarrito = () => {
                 <button id="+${id}" class="btn btn-success">+</button>
                 <button id="-${id}" class="btn btn-success">-</button>
             </td>
+            <td>${totales}</td>
         `
         listaCarrito.append(body)
 
