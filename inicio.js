@@ -18,7 +18,7 @@ let lista = document.getElementById("productos");
             </div>
         </div>`;
         // cargar los productos
-        lista.appendChild(li);
+        lista.append(li);
             // funcuncion boton mas alerta libreria
             const btnComprar = document.getElementById(`comprar${item.id}`);
             btnComprar.addEventListener("click", () => {
@@ -29,7 +29,7 @@ let lista = document.getElementById("productos");
                     icon: 'success',
                     confirmButtonText: 'Aceptar'
                 })
-                comprarProducto(id)
+                ComprarProductos(id)
             });
     });
 })
